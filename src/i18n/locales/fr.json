@@ -1,0 +1,214 @@
+{
+  "app": {
+    "tagline": "Fitness, nutrition et progression en local",
+    "hello": "Bonjour {{name}}",
+    "createProfile": "Crée ton profil pour démarrer"
+  },
+  "language": {
+    "label": "Langue",
+    "fr": "Français",
+    "en": "English",
+    "nl": "Nederlands",
+    "es": "Español"
+  },
+  "theme": { "toggle": "Changer le thème" },
+  "auth": {
+    "loading": "Chargement de la session...",
+    "secureAccess": "Accès sécurisé",
+    "title": "Connecte-toi à ton espace BodyTrack AI",
+    "subtitle": "Crée ton compte ou connecte-toi pour accéder à ton dashboard fitness. Les données nutrition restent pour l’instant stockées localement dans ton navigateur.",
+    "login": "Connexion",
+    "signup": "Créer un compte",
+    "logout": "Déconnexion",
+    "loginTitle": "Bon retour",
+    "signupTitle": "Créer ton compte",
+    "loginSubtitle": "Entre ton email et ton mot de passe pour continuer.",
+    "signupSubtitle": "Utilise un email valide et un mot de passe d’au moins 6 caractères.",
+    "email": "Email",
+    "password": "Mot de passe",
+    "submitting": "Traitement...",
+    "checkEmail": "Compte créé. Vérifie ton email si la confirmation est activée dans Supabase.",
+    "missingConfig": "Supabase n’est pas encore configuré. Ajoute VITE_SUPABASE_URL et VITE_SUPABASE_ANON_KEY dans ton fichier .env.",
+    "benefitProfile": "Compte",
+    "benefitProfileValue": "Privé",
+    "benefitPrivacy": "Auth",
+    "benefitPrivacyValue": "Supabase",
+    "benefitLocal": "Données",
+    "benefitLocalValue": "LocalStorage"
+  },
+  "nav": {
+    "home": "Accueil",
+    "profile": "Profil",
+    "addMeal": "Ajouter repas",
+    "dailyJournal": "Journal du jour",
+    "physicalTracking": "Suivi physique",
+    "weeklyReport": "Rapport semaine",
+    "monthlyReport": "Rapport mois",
+    "yearPlanning": "Planning annuel"
+  },
+  "common": {
+    "calories": "Calories",
+    "protein": "Protéines",
+    "carbs": "Glucides",
+    "fat": "Lipides",
+    "kcal": "kcal",
+    "grams": "g",
+    "remaining": "reste {{value}}",
+    "target": "Objectif : {{value}} {{unit}}",
+    "date": "Date",
+    "weight": "Poids",
+    "waist": "Taille",
+    "chest": "Poitrine",
+    "macros": "Macros",
+    "goal": "Objectif"
+  },
+  "dashboard": {
+    "eyebrow": "Dashboard nutrition",
+    "title": "Ton cockpit du jour",
+    "subtitle": "Suivi du {{date}} avec calories, protéines et équilibre macro en temps réel.",
+    "addMeal": "Ajouter un repas",
+    "chartsTitle": "Graphiques nutrition",
+    "chartsSubtitle": "Calories et protéines des 7 derniers jours",
+    "proteinProgress": "{{value}}% protéines",
+    "calculatedTargets": "Objectifs calculés",
+    "bmr": "Métabolisme de base",
+    "maintenance": "Maintien",
+    "dailyTarget": "Objectif jour",
+    "estimatedFatMass": "Masse grasse estimée",
+    "estimatedLeanMass": "Masse maigre estimée",
+    "motivationCoach": "Coach motivation",
+    "consumedToday": "Consommé",
+    "remainingToday": "Restant",
+    "macroLogged": "Macros loggées",
+    "coachToday": "Coach du jour",
+    "coachTitle": "Ton conseil automatique",
+    "currentGoal": "Objectif actuel"
+  },
+  "goalProgress": {
+    "maintenance": "Maintien",
+    "deficit": "Déficit coach",
+    "surplus": "Surplus coach"
+  },
+  "profile": {
+    "title": "Profil utilisateur",
+    "name": "Nom",
+    "age": "Âge",
+    "sex": "Sexe",
+    "height": "Taille (cm)",
+    "weight": "Poids (kg)",
+    "bodyFat": "Graisse (%)",
+    "activityLevel": "Niveau d’activité",
+    "workouts": "Entraînements / semaine",
+    "mainGoal": "Objectif principal",
+    "level": "Niveau",
+    "smartGoal": "Objectif intelligent",
+    "perDay": "{{value}} {{unit}} / jour",
+    "fatMass": "Masse grasse",
+    "leanMass": "Masse maigre",
+    "coachMessage": "Message coach"
+  },
+  "meal": {
+    "title": "Ajouter un repas",
+    "food": "Aliment",
+    "moment": "Moment",
+    "quantity": "Quantité (g)",
+    "save": "Enregistrer le repas",
+    "calculatedValues": "Valeurs calculées",
+    "forFood": "Pour {{grams}} g de {{food}}"
+  },
+  "journal": {
+    "title": "Journal du jour",
+    "empty": "Aucun repas enregistré aujourd’hui.",
+    "moment": "Moment",
+    "food": "Aliment",
+    "quantity": "Quantité"
+  },
+  "physical": {
+    "title": "Suivi physique",
+    "weightKg": "Poids (kg)",
+    "waistCm": "Tour de taille (cm)",
+    "chestCm": "Tour de poitrine (cm)",
+    "beforePhoto": "Photo avant (URL)",
+    "afterPhoto": "Photo après (URL)",
+    "save": "Enregistrer",
+    "empty": "Aucune mesure enregistrée."
+  },
+  "reports": {
+    "weeklyTitle": "Rapport semaine",
+    "weeklySubtitle": "Moyenne des 7 derniers jours",
+    "monthlyTitle": "Rapport mois",
+    "monthlySubtitle": "Analyse du mois en cours",
+    "avgCalories": "Moy. calories",
+    "avgProtein": "Moy. protéines",
+    "avgCarbs": "Moy. glucides",
+    "avgFat": "Moy. lipides",
+    "weightChange": "Évolution du poids",
+    "totalCalories": "Total calories",
+    "waistChange": "Variation taille",
+    "respected": "Objectif respecté. Continue avec la même régularité.",
+    "improve": "Amélioration : rapproche ta moyenne quotidienne de ton objectif calories.",
+    "weightDown": "Ton poids baisse bien, garde le rythme.",
+    "regularity": "Continue comme ça et vise une bonne régularité."
+  },
+  "planning": {
+    "month": "Mois",
+    "avgCalories": "Calories moy.",
+    "avgProtein": "Protéines moy.",
+    "inProgress": "En cours"
+  },
+  "options": {
+    "sex": { "Homme": "Homme", "Femme": "Femme" },
+    "goal": {
+      "Perte de graisse": "Perte de graisse",
+      "Masse sèche / recomposition": "Masse sèche / recomposition",
+      "Prise de masse": "Prise de masse",
+      "Maintien": "Maintien"
+    },
+    "level": { "Débutant": "Débutant", "Intermédiaire": "Intermédiaire", "Avancé": "Avancé" },
+    "activity": {
+      "Sédentaire": "Sédentaire",
+      "Légèrement actif": "Légèrement actif",
+      "Actif": "Actif",
+      "Très actif": "Très actif"
+    },
+    "moment": {
+      "Petit-déjeuner": "Petit-déjeuner",
+      "Déjeuner": "Déjeuner",
+      "Dîner": "Dîner",
+      "Collation": "Collation"
+    }
+  },
+  "foods": {
+    "Poulet": "Poulet",
+    "Dinde": "Dinde",
+    "Œufs": "Œufs",
+    "Riz": "Riz",
+    "Pâtes": "Pâtes",
+    "Flocons d’avoine": "Flocons d’avoine",
+    "Banane": "Banane",
+    "Pomme": "Pomme",
+    "Thon": "Thon",
+    "Saumon": "Saumon",
+    "Bœuf maigre": "Bœuf maigre",
+    "Patate douce": "Patate douce",
+    "Légumes": "Légumes",
+    "Amandes": "Amandes",
+    "Huile d’olive": "Huile d’olive",
+    "Whey isolate": "Whey isolate"
+  },
+  "coach": {
+    "motivation": {
+      "createProfile": "Crée ton profil pour recevoir un conseil personnalisé.",
+      "missingProtein": "Aujourd’hui il manque des protéines.",
+      "lowCalories": "Attention, calories trop basses.",
+      "nearGoal": "Bravo, tu es proche de ton objectif.",
+      "keepGoing": "Continue comme ça."
+    },
+    "goal": {
+      "fatLoss": "Déficit modéré de {{calories}} kcal : vise {{protein}} g de protéines pour perdre du gras sans sacrifier la masse maigre.",
+      "recomposition": "Recomposition active : calories proches du maintien et protéines hautes ({{protein}} g) pour construire du muscle proprement.",
+      "bulk": "Surplus contrôlé de {{calories}} kcal : assez d’énergie pour progresser sans prise de gras excessive.",
+      "maintenance": "Maintien intelligent : garde tes calories stables et surveille la régularité de tes entraînements."
+    }
+  }
+}
