@@ -110,10 +110,17 @@ function App() {
       return;
     }
 
-    supabase.auth.getSession().then(({ data }) => {
-      setSession(data.session);
-      setIsAuthLoading(false);
-    });
+    supabase.auth
+      .getSession()
+      .then(({ data }) => {
+        setSession(data.session);
+      })
+      .catch(() => {
+        setSession(null);
+      })
+      .finally(() => {
+        setIsAuthLoading(false);
+      });
 
     const { data } = supabase.auth.onAuthStateChange((_event, nextSession) => {
       setSession(nextSession);
@@ -337,20 +344,53 @@ function AuthScreen() {
     }
 
     setIsSubmitting(true);
-    const result =
-      mode === "signup"
-        ? await supabase.auth.signUp({ email, password })
-        : await supabase.auth.signInWithPassword({ email, password });
-    setIsSubmitting(false);
+    try {
+      if (mode === "signup") {
+        const { data, error: signUpError } = await supabase.auth.signUp({ email, password });
 
-    if (result.error) {
-      setError(result.error.message);
-      return;
+        if (signUpError && !data.user) {
+          setError(getAuthErrorMessage(signUpError, t));
+          return;
+        }
+
+        setMessage(t("auth.checkEmail"));
+        return;
+      }
+
+      const { error: loginError } = await supabase.auth.signInWithPassword({ email, password });
+
+      if (loginError) {
+        setError(getAuthErrorMessage(loginError, t));
+      }
+    } catch (authError) {
+      if (mode === "signup") {
+        setMessage(t("auth.checkEmail"));
+      } else {
+        setError(getAuthErrorMessage(authError, t));
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
+  function getAuthErrorMessage(error: unknown, t: (key: string) => string) {
+    const message = error instanceof Error ? error.message : String(error);
+    const normalized = message.toLowerCase();
+
+    if (normalized.includes("failed to fetch") || normalized.includes("network") || normalized.includes("fetch")) {
+      return t("auth.networkError");
     }
 
-    if (mode === "signup" && !result.data.session) {
+    if (normalized.includes("invalid login credentials")) {
+      return t("auth.invalidCredentials");
+    }
+
+    if (normalized.includes("email not confirmed")) {
       setMessage(t("auth.checkEmail"));
+      return t("auth.emailNotConfirmed");
     }
+
+    return message || t("auth.genericError");
   }
 
   return (
